@@ -1,0 +1,28 @@
+{% extends "base_layout.html" %}
+{% block content %}
+<div class="article-detail">
+    <div class="article">
+        <img src="{{ article.thumb.url }}" alt="Thumbnail"width="auto"height="auto">
+        <h2>{{ article.title }}</h2>
+        <h3>Written by {{ article.author.username }}</h3>
+        <p>{{ article.body }}</p>
+        <p>{{ article.date }}</p>
+        
+        {% if article.audio %}
+            <audio controls>
+                <source src="{{ article.audio.url }}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        {% endif %}
+        <br>
+        <br>
+
+        {% if article.video %}
+            <video controls>
+                <source src="{{ article.video.url }}" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        {% endif %}
+    </div>
+</div>
+{% endblock content %}
