@@ -14,10 +14,26 @@ Simple Django Blog is a web application built using Django, a high-level Python 
 - Responsive Design: The application is designed to be responsive and user-friendly across different devices and screen sizes.
 
 ## Installation
-
 To run the Simple Django Blog locally, follow these steps:
-
 1. Clone the repository:
-
-
 git clone https://github.com/samuelGodad/Simple-Django-Blog-.git
+2. Navigate to the project directory:
+cd Simple-Django-Blog-
+3. Create a virtual environment:
+python3 -m venv env
+4. Activate the virtual environment:
+. On Windows:
+.\env\Scripts\activate
+. On macOS and Linux:
+source env/bin/activate
+5. Install the dependencies:
+pip install -r requirements.txt
+6. Apply the database migrations:
+python manage.py migrate
+7. Start the development server:
+python manage.py runserver
+Access the application in your web browser at http://localhost:8000.
+## Contributing
+Contributions to Simple Django Blog are welcome! If you find any issues or have any suggestions for improvements, please feel free to open an issue or submit a pull request.
+## License
+This project is licensed under the MIT License. See the LICENSE file for more information.
